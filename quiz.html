@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="background"></div>
+
+    <div class="container">
+        <header>
+            <h1 id="title">Quiz Application</h1>
+            <p id="quiz-intro">Test your knowledge with our interactive quiz. Answer the questions and get immediate feedback!</p>
+        </header>
+
+        <section id="quiz-container">
+            <div id="question-container">
+                <h2 id="question">Question will appear here</h2>
+                <div id="timer-container">
+                    <span id="timer">00:20</span>
+                </div>
+            </div>
+
+            <div id="answers-container">
+                <!-- Dynamically generated answer buttons -->
+            </div>
+
+            <div id="quiz-footer">
+                <button id="submit-button">Submit Answer</button>
+                <button id="restart-button">Restart Quiz</button>
+            </div>
+        </section>
+
+        <section id="result-container">
+            <h3 id="result">Your result will appear here</h3>
+            <button id="continue-button">Continue</button>
+        </section>
+
+        <footer id="footer">
+            <p>&copy; 2024 Quiz Application. All rights reserved.</p>
+            <p id="footer-info">Created by [Devansh Tomar].</p>
+            <p id="social-media">
+                Follow us:
+                <a href="https://facebook.com" target="_blank">Facebook</a> |
+                <a href="https://twitter.com/in/@iDevanshtomar" target="_blank">Twitter</a> |
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Modal for displaying detailed feedback -->
+    <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Detailed Feedback</h2>
+            <p id="feedback-text">Feedback details will appear here.</p>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>

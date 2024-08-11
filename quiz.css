@@ -1,0 +1,246 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #f4f4f4;
+    overflow: hidden;
+    background: #121212;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('c:\istockphoto-1478776181-640x640.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: backgroundMove 30s linear infinite;
+    z-index: -1;
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+.container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(33, 33, 33, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#title {
+    font-size: 2.5em;
+    margin: 0;
+    color: #bb86fc; /* Base color for the title */
+    animation: glowRed 1.5s ease-in-out infinite alternate, pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes glowRed {
+    from {
+        text-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.4), 0 0 30px rgba(255, 0, 0, 0.3);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.6), 0 0 40px rgba(255, 0, 0, 0.4);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#quiz-intro {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+#question-container {
+    margin-bottom: 20px;
+}
+
+#question {
+    font-size: 1.5em;
+    margin: 0;
+    color: #e0e0e0;
+}
+
+#timer-container {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #e0e0e0;
+}
+
+#answers-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.answer-button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    font-size: 1.1em;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.answer-button:hover {
+    background-color: #3700b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.answer-button:active {
+    transform: scale(0.95);
+}
+
+#quiz-footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#submit-button, #restart-button {
+    background-color: #03dac6;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.1em;
+    margin: 5px;
+}
+
+#submit-button:hover, #restart-button:hover {
+    background-color: #018786;
+}
+
+#submit-button:active, #restart-button:active {
+    transform: scale(0.95);
+}
+
+#result-container {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#result {
+    font-size: 1.5em;
+    color: #ff5722;
+}
+
+#continue-button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1.1em;
+    margin: 5px;
+}
+
+#continue-button:hover {
+    background-color: #3700b3;
+}
+
+#continue-button:active {
+    transform: scale(0.95);
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #bbb;
+}
+
+#footer-info {
+    margin: 10px 0;
+}
+
+#social-media a {
+    color: #bb86fc;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+#social-media a:hover {
+    text-decoration: underline;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #333;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #e0e0e0;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #bb86fc;
+}
+
+.close-button:hover {
+    color: #ff5722;
+}
