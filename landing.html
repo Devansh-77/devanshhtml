@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Brand Landing Page</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FashionHub</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="animated-title">Discover the Latest Trends</h1>
+            <p>Your style, our passion.</p>
+            <a href="#collections" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-text fade-in">
+                <h2>About Us</h2>
+                <p>FashionHub is a premier clothing brand dedicated to bringing you the latest trends and timeless classics. Our mission is to offer high-quality apparel that makes you feel confident and stylish.</p>
+            </div>
+            <div class="about-image fade-in">
+                <img src="about-image.jpg" alt="About Us">
+            </div>
+        </div>
+    </section>
+
+    <section class="collections" id="collections">
+        <h2>Our Collections</h2>
+        <div class="collection-grid">
+            <div class="collection-item fade-in">
+                <img src="summer-collection.jpg" alt="Summer Collection">
+                <div class="collection-info">
+                    <h3>Summer Collection</h3>
+                    <p>Light and breezy outfits perfect for summer.</p>
+                </div>
+            </div>
+            <div class="collection-item fade-in">
+                <img src="winter-wear.jpg" alt="Winter Wear">
+                <div class="collection-info">
+                    <h3>Winter Wear</h3>
+                    <p>Stay warm and stylish with our winter collection.</p>
+                </div>
+            </div>
+            <div class="collection-item fade-in">
+                <img src="casual-outfits.jpg" alt="Casual Outfits">
+                <div class="collection-info">
+                    <h3>Casual Outfits</h3>
+                    <p>Comfort meets style in our casual collection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form" class="fade-in">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FashionHub. All rights reserved.</p>
+    </footer>
+
+    <script src="landing.js"></script>
+</body>
+</html>
